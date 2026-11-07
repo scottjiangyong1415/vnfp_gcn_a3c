@@ -1,19 +1,17 @@
-
-TRAIN = {
-    "lr": 1e-4,
-    "gamma": 0.99,
-    "tau": 1.0,
-    "beta_entropy": 0.01,
-    "num_workers": 4,
-    "max_ep": 3000,
-    "update_global_freq": 5,
-    "gcn_k": 3,
-    "hidden_dim": 64,
-    "device": torch.device("cuda" if torch.cuda.is_available() else "cpu")
-}
-
-REWARD = {
-    "alpha_r": 1.0,
-    "alpha_c": 0.3,
-    "alpha_s": 0.1
+ENV = {
+    "substrate_nodes": 15,
+    "substrate_cpu_low": 50,
+    "substrate_cpu_high": 100,
+    "substrate_bw_low": 50,
+    "substrate_bw_high": 100,
+    "vnr_min_nodes": 2,
+    "vnr_max_nodes": 6,
+    "vnr_cpu_low": 5,
+    "vnr_cpu_high": 30,
+    "vnr_bw_low": 5,
+    "vnr_bw_high": 30,
+    "lam": 0.2,          # VNR到达率（泊松）
+    "max_vnr_queue": 10,
+    "waxman_alpha": 0.4,
+    "waxman_beta": 0.1
 }

@@ -16,4 +16,5 @@ ENV = {
     "max_vnr_queue": 10,            # VNR等待队列最大长度；队列满，新到达请求直接丢弃
     "waxman_alpha": 0.4,            # Waxman图α：基础连边概率上限，控制拓扑稠密程度
     "waxman_beta": 0.1,             # Waxman图β：距离衰减系数，远距离节点连边概率衰减快慢
-    "lifetime_mean":
+    "lifetime_mean": 500            # VNR平均生存时间，指数分布均值；嵌入成功后占用资源时长
+}
